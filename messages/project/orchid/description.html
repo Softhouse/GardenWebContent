@@ -1,0 +1,34 @@
+<p>
+The main idea with this project is to create tools for web content management applications. The content are stored in
+regular files (properties, text, html) which is stored in a file system. The main benefit of this is that the content
+can be versioned by GIT. The goal is to have multiple publishers and authoring tools developed for multiple languages 
+and web frameworks as described in the following picture.
+</p>
+<img alt="Orchid Overview" src="{link:/resources/images/orchid.png}" />
+<p>
+<br>
+Currently the following modules are available:
+</p>
+<b>se.softhouse.garden.orchid.commons</b>
+<p>
+	This module contains a property load which can load messages from a directory structure. It uses the same structure
+	as used by properties in java except that the key is the path to the file, i.e. the property key a.b.c.d maps
+	to the file a/b/c/d.txt where the suffix might differ. The filename might also contain the locale name,
+	e.g. d_en_US.txt. It is also possible to add property files in the structure, they are then interpreted and 
+	inserted in the hierarchy, e.g. a/b/c.properties. The properties are accessed using the MessageFormat class available
+	in the JDK. The properties might contain the same syntax as provided by MessageFormat and an extension which makes
+	it possible to use named arguments instead of numbered arguments.
+
+</p>
+<b>se.softhouse.garden.orchid.spring</b>
+<p>
+	This module contains some utilities for Spring MVC:
+	<ul>
+		 <li>Extensions to the MessageSource bean to support the OrchidMessageFormat and OrchidDirectoryLoader 
+		 provided in the commons module. </li>
+		 <li>Tags and beans for inserting texts with named arguments.</li>
+		 <li>Beans which can used to create links.</li>
+	</ul>
+	This site is implemented using the orchid spring module and can be used as an example application.
+	See project <a href="{link:/project/garden}">Garden Web</a> for information about how to access the source.
+</p>

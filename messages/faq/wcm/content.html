@@ -1,0 +1,52 @@
+<div class="divider_line">
+	<h3>Question</h3>
+	<p>
+		How do I edit the content on this site?
+	</p>
+	<h3>Answer</h3>
+	<p>
+		The content is stored in the <a href="https://github.com/Softhouse/gardenwebcontent">GardenWebContent</a> project on GitHub.
+		Make sure you are a member of the <a href="https://github.com/organizations/Softhouse/teams/95363">GardenWeb team</a> of
+		the <a href="{link:/faq/github}">Softhouse Organization at GitHub</a>. Clone git@github.com:Softhouse/GardenWebContent.git 
+		and change/add the content you want. Push the changes and click <a href="{link:/refresh}">this link</a> to reload the content.
+	</p>
+</div>
+<div class="divider_line">
+	<h3>Question</h3>
+	<p>
+		How do I add my self to the list of people?
+	</p>
+	<h3>Answer</h3>
+	<p>
+		Add the file &lt;yourname>.properties to the messages/people directory with the following content.
+		<code>
+title = Your full name
+description = A description of your self
+# Add any number of link to ohter profiles of yours, e.g. Twitter, Google+, GitHub, BitBucket
+link.1.name = A descriptive name of the link
+link.1.image = A URL to an image to use,
+link.1.url = The URL to your profile
+		</code> 
+	</p>
+</div>
+<div class="divider_line">
+	<h3>Question</h3>
+	<p>
+		How do I add a project to the list of projects?
+	</p>
+	<h3>Answer</h3>
+	<p>
+		Add the file &lt;yourproject>.properties to the messages/project directory with the following content.
+		<code>
+title=The name of the project
+intro=A short description of the project.
+home=The link to the home page of the project.
+contributors=A comma separated list of people as defined in the people directory.
+source=The link to the source code.
+issues=The link to the issue tracking of the project.
+license=The name of the license under which the project is released
+licenseurl=The link to the license
+description=A description of the project. This can also be specified in the html file messages/project/&lt;yourproject>/content.html 
+		</code> 
+	</p>
+</div>
